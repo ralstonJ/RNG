@@ -1,0 +1,12 @@
+{
+	"name" : "Random Group Maker",
+	"description":"Generate Groups when names are entered",
+	"version": "0.1",
+	"app": {
+		"background": {
+			"scripts":["background.js"]
+		}
+
+	}
+
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+  <head>
+
+
+    <link rel="stylesheet" href="todo.css">
+
+
+
+  </head>
+
+
+  <body>
+    <div>
+      <form>
+        <input type="text" size="30"
+               placeholder="add new name here">
+        <input class="btn-primary" type="submit" value="add">
+        <input class="btn-primary" id="btnClr" type="button" value="clear">
+        <input class="btn-primary" id="btnRandom" type="button" value="random them">
+      </form>
+
+      <h2> List of Names: </h2>
+      <ul class="unstyled" id="alist">
+      </ul>
+      <div id="headnlist">
+      </div>
+
+
+    </div>
+
+    <!-- needed template -->
+    <div id="templates" style="display: none;">
+      <h2 data-name="heading" >
+        <span></span>
+        </h2>
+      <ul class="unstyled" data-name="ulist">
+      </ul>
+      <li data-name="list">
+        <span></span>
+      </li>
+      
+    </div>
+
+
+    <script src="controller.js"></script>
+  </body>
+</html>
