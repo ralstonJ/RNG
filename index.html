@@ -11,36 +11,66 @@
   </head>
 
 
-  <body>
-    <div>
+  <body class="main_display" >
+    
+    <div >
       <form>
-        <input type="text" size="30"
-               placeholder="add new name here">
-        <input class="btn-primary" type="submit" value="add">
-        <input class="btn-primary" id="btnClr" type="button" value="clear">
-        <input class="btn-primary" id="btnRandom" type="button" value="random them">
+        <input type="text"    size="30"                           placeholder="add new name here">
+        <input type="submit"  class="btn-primary"                 value="add">
+        <input type="button"  class="btn-primary" id="btnClr"     value="clear">
+        <input type="button"  class="btn-primary" id="btnNext"    value="next >>"> <br/>
+        <input type="text"    size="30"            id="txtNumGrp"  placeholder="add number of groups"          style="display: none;" >
+        <br/>
+        <input type="text"    size="30"            id="txtNumMem"  placeholder="add member limit in each group"style="display: none;">
+        <br/>
+        <input type="button"  class="btn-primary" id="btnRandom"  value="random them"                          style="display: none;">
+        <br/>
       </form>
 
-      <h2> List of Names: </h2>
-      <ul class="unstyled" id="alist">
-      </ul>
-      <div id="headnlist">
-      </div>
-
-
+      <h2> List of Names:  <span id="name-counter">0</span></h2>
+      <ul class="unstyled" id="list-Unassigned"> </ul>
+      <ul class="unstyled" id="list-Header"> </ul>
     </div>
 
     <!-- needed template -->
-    <div id="templates" style="display: none;">
-      <h2 data-name="heading" >
-        <span></span>
-        </h2>
-      <ul class="unstyled" data-name="ulist">
-      </ul>
-      <li data-name="list">
-        <span></span>
-      </li>
-      
+    <div id="template-nameList" style="display: none;">
+    <li data-name="list">
+      <span></span>
+    </li>
+    </div>
+    
+    <!-- Template for header <li> -->
+    <div id="template-headerList" style="display:none;">
+    <li data-name="list-WRTHeader">
+      <h2></h2>
+    </li> 
+    </div>  
+
+    <!-- Template for Groupwise <ul> -->
+    <div id="template-groupWise" style="display:none;">
+        <ul data-name="list-Group"></ul>
+    </div> 
+
+    <!-- Template for names W R T  Group --> 
+    <div id="template-nameWRTGroup" style="display:none;">
+    <li data-name="list-WRTGroup">
+      <span></span>
+    </li>
+    </div>
+
+    <!-- Template for Unassugned group header <li> -->
+    <div id="template-headerList" style="display:none;">
+    <li data-name="list-WRTHeader">
+      <h2>Members without a group</h2>
+    </li> 
+    </div>
+
+    <!-- Template for names W R T  Group Unassigned --> 
+    <div id="template-nameUnGroup" style="display:none;">
+    <li data-name="list-UnGroup">
+      <span></span>
+    <!--  <input type="button"  class="btn-primary" value="clear"> -->
+     </li>
     </div>
 
 
